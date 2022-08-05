@@ -6,7 +6,7 @@
 /*   By: pnolte <pnolte@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 13:23:35 by pnolte            #+#    #+#             */
-/*   Updated: 2022/08/04 12:33:57 by pnolte           ###   ########.fr       */
+/*   Updated: 2022/08/05 16:05:52 by pnolte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	main(int argc, char **argv)
 
 	if (argc < 2)
 		return (1);
-	stack_a = init_stack_a(argc, argv);
+	init_stack_a(argc, argv, &stack_a);
 	stack_b = NULL;
 	if (check_if_sorted(stack_a) == 0)
 		my_exit(1);

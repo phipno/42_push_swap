@@ -6,7 +6,7 @@
 /*   By: pnolte <pnolte@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 11:21:03 by pnolte            #+#    #+#             */
-/*   Updated: 2022/08/04 11:20:43 by pnolte           ###   ########.fr       */
+/*   Updated: 2022/08/05 16:07:12 by pnolte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	check_if_double(t_stack *stack)
 {
-	t_stack *cpy;
-	t_stack *cpy2;
+	t_stack	*cpy;
+	t_stack	*cpy2;
 	int		i;
 
 	i = 0;
@@ -38,12 +38,11 @@ void	check_if_double(t_stack *stack)
 	}
 }
 
-t_stack	*init_stack_a(int argc, char **argv)
+void	init_stack_a(int argc, char **argv, t_stack **stack)
 {
 	int		j;
 	int		i;
 	t_stack	*new;
-	t_stack	*stack;
 	char	**split;
 
 	j = 1;
@@ -55,15 +54,14 @@ t_stack	*init_stack_a(int argc, char **argv)
 		{
 			new = ft_lstnew(ft_atoi(split[i]));
 			i++;
-			if (stack == NULL)
-				stack = new;
+			if (*stack == NULL)
+				*stack = new;
 			else
-				ft_lstadd_back(stack, new);
+				ft_lstadd_back(*stack, new);
 		}
-		new = stack;
-		check_if_double(stack);
+		new = *stack;
+		check_if_double(*stack);
 		free(split);
 		j++;
 	}
-	return (stack);
 }

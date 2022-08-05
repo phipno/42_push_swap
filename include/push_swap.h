@@ -6,7 +6,7 @@
 /*   By: pnolte <pnolte@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 13:19:35 by pnolte            #+#    #+#             */
-/*   Updated: 2022/08/03 16:51:14 by pnolte           ###   ########.fr       */
+/*   Updated: 2022/08/05 16:07:01 by pnolte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	rrr(t_stack **stack_a, t_stack **stack_b);
 /* functions for parsing, initalsiang and checking input. the ft_atoi
 is from my libft it was slightly changed for input handling*/
 /*inside src/init.c*/
-t_stack	*init_stack_a(int argc, char **argv);
+void	init_stack_a(int argc, char **argv, t_stack **stack_a);
 void	check_if_double(t_stack *stack);
 
 /*utils functions*/
