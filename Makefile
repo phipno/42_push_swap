@@ -15,10 +15,10 @@ libft:
 	make -C ./libft
 
 %.o: %.c
-	$(CC) $(CFLAGS) -o $@ -c $<
+	gcc $(CFLAGS) -o $@ -c $<
 
 $(NAME): $(OBJS) libft
-	$(CC) $(OBJS) -L $(LIBDIR) -l $(LIBNAME) -o $(NAME)
+	gcc $(OBJS) -L $(LIBDIR) -l $(LIBNAME) -o $(NAME)
 
 clean:
 	rm -f $(OBJS)

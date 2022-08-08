@@ -6,7 +6,7 @@
 /*   By: pnolte <pnolte@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 11:21:03 by pnolte            #+#    #+#             */
-/*   Updated: 2022/08/05 16:07:12 by pnolte           ###   ########.fr       */
+/*   Updated: 2022/08/08 16:35:35 by pnolte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	check_if_double(t_stack *stack)
 
 	i = 0;
 	cpy2 = stack;
+	if (stack == NULL)
+		return ;
 	while (cpy2->next != NULL)
 	{
 		cpy = cpy2;
