@@ -18,7 +18,7 @@ libft:
 	gcc $(CFLAGS) -o $@ -c $<
 
 $(NAME): $(OBJS) libft
-	gcc $(OBJS) -L $(LIBDIR) -l $(LIBNAME) -o $(NAME)
+	gcc $(OBJS) $(CFLAGS) -L $(LIBDIR) -l $(LIBNAME) -o $(NAME)
 
 clean:
 	rm -f $(OBJS)
